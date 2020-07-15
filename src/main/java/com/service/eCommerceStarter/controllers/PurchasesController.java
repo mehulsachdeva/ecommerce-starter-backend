@@ -10,13 +10,12 @@ import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("/service/api")
+@RequestMapping("/service")
 public class PurchasesController {
     @Autowired
     private PurchasesServiceImpl purchasesService;
 
     @PostMapping("/purchase")
-    @PreAuthorize("@jwtUserSecurity.hasAccess(#purchases, authentication)")
     public Map<String, String> makePurchase(@RequestBody final Purchases purchases) {
         return purchasesService.makePurchase(purchases);
     }

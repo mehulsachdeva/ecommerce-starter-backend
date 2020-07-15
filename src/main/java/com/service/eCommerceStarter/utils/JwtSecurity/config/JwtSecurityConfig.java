@@ -48,7 +48,7 @@ public class JwtSecurityConfig extends WebSecurityConfigurerAdapter{
                 .authorizeRequests()
                 .antMatchers("**/service/login").permitAll()
                 .antMatchers("**/service/register").permitAll()
-                .antMatchers("**/service/api").authenticated()
+                .antMatchers("**/service/api/**").authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(entryPoint)
                 .and()

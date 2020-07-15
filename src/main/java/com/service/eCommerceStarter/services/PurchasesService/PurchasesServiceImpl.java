@@ -51,10 +51,14 @@ public class PurchasesServiceImpl {
                     long productId = Long.parseLong(jsonObject.get("productId").toString());
                     String name = jsonObject.get("name").toString();
                     String description = jsonObject.get("description").toString();
+                    String details = jsonObject.get("details").toString();
+                    String category = jsonObject.get("category").toString();
                     int price = Integer.parseInt(jsonObject.get("price").toString());
                     int isAvailable = Integer.parseInt(jsonObject.get("isAvailable").toString());
+                    String images = jsonObject.get("images").toString();
+                    String artistInfo = jsonObject.get("artistInfo").toString();
                     long version = Long.parseLong(jsonObject.get("version").toString());
-                    Product product = new Product(productId, name, description, price, isAvailable, version);
+                    Product product = new Product(productId, name, description, details, category, price, isAvailable, images, artistInfo, version);
                     product.setIsAvailable(0);
                     purchaseProducts += "{\"productId\":" + productId + ",\"name\":\"" + name + "\"},";
                     productRepository.save(product);

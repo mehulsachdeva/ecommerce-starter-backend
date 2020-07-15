@@ -23,11 +23,23 @@ public class Product {
     @Column(name = "description", nullable = false)
     private String description;
 
+    @Column(name = "details", nullable = false)
+    private String details;
+
+    @Column(name = "category", nullable = false)
+    private String category;
+
     @Column(name = "price", nullable = false)
     private int price;
 
     @Column(name = "is_available", nullable = false)
     private int isAvailable;
+
+    @Column(name = "images", nullable = false)
+    private String images;
+
+    @Column(name = "artist_info", nullable = false)
+    private String artistInfo;
 
     @Column(name = "version", nullable = false)
     @Version
