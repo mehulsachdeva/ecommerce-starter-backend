@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -33,4 +34,10 @@ public class Purchases {
 
     @Column(name = "payment_status")
     private String paymentStatus;
+
+    @Column(name = "date_of_purchase")
+    private final Date dateOfPurchase = new Date();
+
+    @Column(name = "address")
+    private String address;
 }

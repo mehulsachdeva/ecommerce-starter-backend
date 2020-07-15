@@ -16,22 +16,29 @@ public class Constants {
 
     public static final String MAKE_PURCHASE_SUCCESS_RESPONSE = "Purchase Made Successfully";
     public static final String MAKE_PURCHASE_FAILURE_RESPONSE = "Failed To Make Purchase";
+    public static final String OUT_OF_STOCK_RESPONSE = "One Or More Item Became Out of Stock";
+    public static final String OUT_OF_STOCK_ERROR = "Out Of Stock Error";
 
-    public static final String RESERVE_PRODUCT_SUCCESS_RESPONSE = "Reservation Successfully";
-    public static final String RESERVE_PRODUCT_FAILURE_RESPONSE = "Failed To Reserve Product";
+    public static final String FETCH_PURCHASE_HISTORY_FAILURE_RESPONSE = "Failed To Fetch Purchase History";
+    public static final String FETCH_PURCHASES_FAILURE_RESPONSE = "Failed To Fetch All Purchases";
 
-    public static final String UNRESERVE_PRODUCT_SUCCESS_RESPONSE = "Unreservation Successfully";
-    public static final String UNRESERVE_PRODUCT_FAILURE_RESPONSE = "Failed To Unreserve Product";
+    public static final String STORE_PRODUCT_SUCCESS_RESPONSE = "Product Stored Successfully";
+    public static final String STORE_PRODUCT_FAILURE_RESPONSE = "Failed To Store Product";
 
-    public static final String INSUFFICIENT_QUANTITY_ERROR = "Insufficient Product Quantity";
+    public static final String UPDATE_PRODUCT_SUCCESS_RESPONSE = "Product Updated Successfully";
+    public static final String UPDATE_PRODUCT_FAILURE_RESPONSE = "Failed To Update Product";
 
+    public static final String NO_PRODUCT_FOUND_BY_ID = "No Product Found By Id";
+
+    public static final String FETCH_PRODUCTS_FAILURE_RESPONSE = "Failed To Fetch Products";
     public static final String SUCCESS_STATUS = "Success";
     public static final String FAILED_STATUS = "Failure";
     public static final String NO_ERROR = "";
     public static final String EXCEPTION_RAISED = "Exception Raised: ";
 
     //SQL Query
-    public static final String ADD_TO_CART_QUERY = "INSERT INTO cart (user_id, product_id, quantity) VALUES (:userId, :productId, :quantity)";
-    public static final String FIND_QUANTITY_FROM_CART_QUERY = "SELECT quantity FROM cart WHERE user_id = :userId AND product_id = :productId";
-    public static final String REMOVE_FROM_CART_QUERY = "DELETE FROM cart WHERE user_id = :userId AND product_id = :productId";
+    public static final String GET_PRODUCT_VERSION_QUERY = "SELECT version FROM products WHERE product_id = :productId";
+
+    //Variables
+    public static final int PAGE_SIZE = 10;
 }
